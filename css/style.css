@@ -1,0 +1,90 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+@font-face {
+  font-family: Avenir;
+  src: url(../assets/Metropolis-Medium.otf);
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap");
+/*font-family: 'Playfair Display', serif;*/
+
+.banner-area {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+}
+
+/* .banner-text {
+  position: absolute;
+  top: 50%;
+  left: 0%;
+  color: #fff;
+  font-family: "Playfair Display", serif;
+  text-align: center;
+} */
+.single-banner {
+  display: flex !important;
+  flex-direction: column;
+  justify-content: center;
+  background-size: cover;
+  background-position: 50%;
+  height: 100vh;
+  width: 100vw;
+  padding: 25px;
+}
+.single-banner-1 {
+  background-image: url(../assets/image1.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+.single-banner-2 {
+  background-image: url(../assets/sea.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+.single-banner-3 {
+  background-image: url(../assets/LifeIsStrange.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+.slick-dots {
+  position: absolute;
+  bottom: 25px;
+  list-style: none;
+  display: block;
+  text-align: center;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+}
+.slick-dots li {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+}
+.slick-dots button {
+  display: block;
+  width: 1rem;
+  height: 1rem;
+  padding: 0;
+  margin: 0 5px;
+  border: none;
+  border-radius: 100%;
+  background-color: grey;
+  text-indent: -9999px;
+}
+
+.slick-dots li.slick-active button {
+  background-color: white;
+}
