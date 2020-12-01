@@ -6,6 +6,7 @@ function toggle(){
     popup.classList.toggle('active')
 }
 
+/*Hamburger Menu*/
 function myFunction() {
     var x = document.getElementById("myLinks");
     if (x.style.display === "block") {

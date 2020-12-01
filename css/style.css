@@ -232,9 +232,6 @@ span {
     height: auto;
     margin-left: 0;
   }
-  .icon-bar {
-    display: none;
-  }
 
   header {
     overflow: hidden;
