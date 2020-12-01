@@ -1,14 +1,57 @@
+/*PAGE CONFIG*/
 * {
   margin: 0;
   padding: 0;
 }
 @font-face {
-  font-family: Avenir;
+  font-family: "Avenir";
   src: url(../assets/Metropolis-Medium.otf);
 }
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap"); /*font-family: 'Montserrat', sans-serif;*/
 
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap");
-/*font-family: 'Montserrat', sans-serif;*/
+/*Header*/
+
+header {
+  display: flex;
+  justify-content: space-around;
+  padding: 20px;
+  font-family: "Avenir";
+  font-size: 15px;
+  color: #ffffff;
+}
+.logo {
+  font-size: 18px;
+  cursor: pointer;
+}
+span {
+  font-style: italic;
+}
+
+.icons i {
+  font-size: 20px;
+  margin-right: 40px;
+  cursor: pointer;
+}
+
+.links {
+  display: flex;
+  text-decoration: none;
+  list-style: none;
+  color: #ffffff;
+}
+
+.links a {
+  color: #ffffff;
+  text-decoration: none;
+  list-style: none;
+  margin: 30px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  transition: 0.5s ease;
+}
+.links a:hover {
+  color: #778899;
+}
 
 /*Slick Slider*/
 .banner-area {
@@ -18,8 +61,13 @@
   height: 100%;
   width: 100%;
   z-index: -1;
+  transition: 0.3s ease;
 }
-
+.banner-area#blur.active {
+  filter: blur(8px);
+  pointer-events: none;
+  user-select: none;
+}
 .banner-text {
   letter-spacing: 1px;
   text-transform: uppercase;
@@ -45,7 +93,7 @@
   padding: 25px;
 }
 .single-banner-1 {
-  background-image: url(../assets/sea.jpg);
+  background-image: url(../assets/car.jpg);
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -63,7 +111,7 @@
   background-repeat: no-repeat;
 }
 .single-banner-4 {
-  background-image: url(../assets/car.jpg);
+  background-image: url(../assets/sea.jpg);
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -99,7 +147,7 @@
   background-color: white;
 }
 
-/*SOCIAL MEDIA ICONS*/
+/*Social Media Icons*/
 .icon-bar {
   position: fixed;
   top: 50%;
@@ -110,7 +158,7 @@
 }
 
 .icon-bar a {
-  margin-right: 16px;
+  margin-right: 14px;
   margin-bottom: 16px;
   display: block;
   text-align: center;
@@ -129,4 +177,92 @@
 
 .youtube {
   color: white;
+}
+
+/*Popup Modal*/
+#popup {
+  font-family: "Avenir";
+  margin: 20px;
+  border-radius: 10px;
+  position: fixed;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 600px;
+  padding: 50px;
+  box-shadow: 0 5px 30px rgba(0, 0, 0, 0.3);
+  background: #fff;
+  visibility: hidden;
+  opacity: 0;
+  transition: 0.5s;
+  list-style: none;
+}
+#popup a {
+  list-style: none;
+  text-decoration: none;
+  padding: 5px;
+  margin-top: 10px;
+  border-radius: 5px;
+  color: lightblue;
+}
+#popup.active {
+  visibility: visible;
+  opacity: 1;
+  transition: 0.5s;
+  top: 50%;
+}
+
+/*Media Queries*/
+@media screen and (max-width: 900px) {
+  .links {
+    justify-content: space-between;
+  }
+  #search,
+  .links {
+    display: none;
+  }
+}
+@media screen and (max-width: 650px) {
+  .banner-text {
+    position: static;
+    text-align: left;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: auto;
+    margin-left: 0;
+  }
+  .icon-bar {
+    display: none;
+  }
+
+  header {
+    overflow: hidden;
+    position: relative;
+  }
+
+  header #myLinks {
+    display: none;
+  }
+
+  header a {
+    color: white;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+    display: block;
+  }
+
+  header a.icon {
+    background: black;
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+
+  .active {
+    background-color: #333;
+    color: white;
+  }
 }

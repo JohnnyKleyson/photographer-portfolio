@@ -11,46 +11,67 @@
 </head>
 </head>
 <body>
+    <header>
+        <div class="logo">
+            <p>Maya <span>Torres</span></p>
+        </div>
+        <ul class="links" id="myLinks">
+            <li><a href="#">Galeria</a></li>
+            <li><a href="#">Explore</a></li>
+            <li><a href="#">Portfolio</a></li>
+            <li><a href="#" onclick="toggle()">Sobre</a></li>
+        </ul>
+        <div class="icons" onclick="myFunction()">
+            <i class="fas fa-search" id="search"></i>
+            <i class="fas fa-bars" ></i>
+        </div>
+        
+    </header>
 
     <div class="icon-bar">
         <a href="#" class="facebook"><i class="fa fa-facebook"></i></a> 
         <a href="#" class="twitter"><i class="fa fa-twitter"></i></a> 
         <a href="#" class="youtube"><i class="fa fa-youtube"></i></a> 
-      </div>
-    <div class="banner-area">
+      </div> <!--Social Media Icons-->
+
+    <div class="banner-area" id="blur">
         <div class="single-banner single-banner-1">
             <div class="banner-text">
-                <p>These Amazing 
-                    Photos Will Inspire 
-                    Your Travels</p>
+                <p>Essas Incríveis 
+                    fotos irão inspirar 
+                suas viagens</p>
             </div>
         </div>
 
         <div class="single-banner single-banner-2">
             <div class="banner-text">
-                <p>These Amazing 
-                    Photos Will Inspire 
-                    Your Travels</p>
+                <p>Trazer uma nova 
+                    visão Sobre
+                    o seu cotidiano
+                </p>
             </div>
         </div>
 
         <div class="single-banner single-banner-3">
             <div class="banner-text">
-                <p>These Amazing 
-                    Photos Will Inspire 
-                    Your Travels</p>
+                <p>Capturar momentos e sentimentos
+                </p>
             </div>
         </div>
 
         <div class="single-banner single-banner-4">
             <div class="banner-text">
-                <p>These Amazing 
-                    Photos Will Inspire 
-                    Your Travels</p>
+                <p>Só basta você entrar em contato</p>
             </div>
         </div>
+    </div><!--Slider-->
+    <div id="popup">
+        <h2>Lorem ipsum dolor sit amet consectetur adipisicing elit. </h2>  <br>
+        <p>Voluptatem atque eveniet, qui nemo ipsa asperiores consectetur ipsum, voluptatum rerum rem perferendis eum iusto fugiat quam nulla.
+             Dignissimos odio eveniet similique!ui nemo ipsa asperiores consectetur ipsum, voluptatum rerum rem perferendis eum iusto fugiat quam nulla.
+             Dignissimos odio eveniet similique</p> <br>
+        <li><a href="#" onclick="toggle()">Fechar</a></li>
     </div>
-
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script>
     <script src="./js/slick.min.js"></script>
@@ -63,5 +84,6 @@
             mobileFirst: true
         })
     </script>
+    <script src="./js/script.js"></script>
 </body>
 </html>
